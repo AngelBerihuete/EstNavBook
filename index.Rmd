@@ -16,6 +16,6 @@ description: "Este libro forma parte de un proyecto de innovación para la creac
 
 Este libro es una recopilación de apuntes y presentaciones en las clases de estadística descriptiva. No es un libro completo. Al contrario, se está insertando y actualizando material de manera continua. ¡Cualquier sugerencia a través de GitHub será bienvenida!
 
-El libro ha sido escrito en [R-Markdown](http://rmarkdown.rstudio.com) utilizando el paquete [`bookdown`](https://bookdown.org/yihui/bookdown/) y está disponible en el repositorio Github: [AngelBerihuete/EstNavBook](https://github.com/AngelBerihuete/EstNavBook_intro).
+El libro ha sido escrito en [R-Markdown](http://rmarkdown.rstudio.com) utilizando el paquete [`bookdown`](https://bookdown.org/yihui/bookdown/) y está disponible en el repositorio Github: [AngelBerihuete/EstNavBook](https://github.com/AngelBerihuete/EstNavBook).
 
 Esta obra está bajo una licencia de [Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional](https://creativecommons.org/licenses/by-sa/4.0/deed.es).
