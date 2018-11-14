@@ -260,7 +260,7 @@ En general hay atentos a que todos los elementos de un gráfico estén represent
 ![Fuente: Verne (El País)](images/grafico_erroneo4bis.png)
 
 
-Se pueden encontrar todos estos gráficos y su expliacción en el diario [El País](https://verne.elpais.com/verne/2015/01/23/articulo/1422014607_223837.html) así como en  la cuenta de Twitter de Kiko Llaneras [@kikollan](https://twitter.com/kikollan)
+Se pueden encontrar todos estos gráficos y su expliacción en el diario [El País](https://verne.elpais.com/verne/2015/01/23/articulo/1422014607_223837.html) así como en  la cuenta de Twitter de [Kiko Llaneras](https://twitter.com/kikollan)
 
 
 ## Medidas de posición central
@@ -575,7 +575,15 @@ ggplot(data = data_kurt, aes(valor, ..density..)) +
 
 En las distribuciones anteriores, y de izquierda a derecha, las curtosis tienen un valor de 
 
-`r e1071::kurtosis(x1, type = 3)`, `r e1071::kurtosis(x2, type = 3)`, `r e1071::kurtosis(x3, type = 3)`, respectivamente.
+`r e1071::kurtosis(x1, type = 3)`, `r e1071::kurtosis(x2, type = 3)`, `r e1071::skewness(x3, type = 3)`, respectivamente.
+
+Puede verse una aplicación de cómo el histograma y el diagrama de caja tienen un comportamiento similar ante diferentes formas de la distribución en la siguiente aplicación:
+
+```{r}
+knitr::include_app("https://berihuete.shinyapps.io/Histogram/", 
+  height = "600px")
+```
+
 
 ## Tipificación
 

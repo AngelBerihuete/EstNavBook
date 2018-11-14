@@ -1,0 +1,31 @@
+# Análisis bivariante. Ajuste y regresión bidimensional.
+
+# Objetivos del tema:
+
+Cuando analizamos dos variables estadísticas a la vez, hablamos de **estadística descriptiva bivariante**. Si hay más de dos, hablamos de **estadística descriptiva multivariante**. Por ejemplo:
+
+```{r, echo=FALSE, results="asis"}
+xx <- x <- c(14 , 12 , 15 , 13 , 16 , 17 , 13 , 15 , 16 , 16 , 17 , 16 , 14 , 15 , 15)
+yy <- y <- c(3 , 4 , 1 , 5 , 0 , 1 , 4 , 1 , 2 , 1 , 0 , 1 , 4 , 3 , 2)
+
+xx[12] <- '...'
+yy[12] <- '...'
+
+dataxy <- data.frame(X = xx, Y = yy)
+pander::pandoc.table(dataxy[1:5,], style = 'rmarkdown')
+```
+
+Una observación de esta variable bidimensional es $(14,3)$.
+
+Los objetivos que nos planteamos para este capítulo son:
+
+- Organizar los datos en tablas de frecuencias, buscando la mejor forma de representarlos gráficamente. 
+
+- Medir la relación entre dos variables estadísticas cualitativas.
+
+- Medir la relación entre dos variables estadísticas cuantitativas.
+
+- Realizar predicciones y medir la fiabilidad de dicha predicción.
+
+- Entender que **la correlación no implica causalidad**.
+

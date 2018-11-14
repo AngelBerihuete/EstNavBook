@@ -31,6 +31,46 @@
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
 \bibliographystyle{apalike}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -757,8 +797,8 @@ los médios de comunicación podrían ser los siguientes:
 
 Se pueden encontrar todos estos gráficos y su expliacción en el diario
 \href{https://verne.elpais.com/verne/2015/01/23/articulo/1422014607_223837.html}{El
-País} así como en la cuenta de Twitter de Kiko Llaneras
-\citep{kikollan}(\url{https://twitter.com/kikollan})
+País} así como en la cuenta de Twitter de
+\href{https://twitter.com/kikollan}{Kiko Llaneras}
 
 \section{Medidas de posición central}\label{medidas-de-posicion-central}
 
@@ -1593,8 +1633,8 @@ mediana se aproximan a la moda.
 
 \begin{center}\includegraphics{01-AnalDatos_files/figure-latex/unnamed-chunk-22-1} \end{center}
 
-En estos casos, la asimetría es, de izquierda a derecha, -0.0126161,
-0.9563481, -0.783654, respectivamente.
+En estos casos, la asimetría es, de izquierda a derecha, 0.0491772,
+0.776285, -0.6764108, respectivamente.
 
 \subsection{Curtosis}\label{curtosis}
 
@@ -1615,7 +1655,18 @@ Para el cálculo de la curtosis utilizaremos
 En las distribuciones anteriores, y de izquierda a derecha, las curtosis
 tienen un valor de
 
-0.1221354, 990.2941669, -1.1957869, respectivamente.
+-0.2832262, 385.208987, 0.0683932, respectivamente.
+
+Puede verse una aplicación de cómo el histograma y el diagrama de caja
+tienen un comportamiento similar ante diferentes formas de la
+distribución en la siguiente aplicación:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_app}\NormalTok{(}\StringTok{"https://berihuete.shinyapps.io/Histogram/"}\NormalTok{, }
+  \DataTypeTok{height =} \StringTok{"600px"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \section{Tipificación}\label{tipificacion}
 
@@ -1645,9 +1696,45 @@ trabajador se tiene: \(\bar{x}_B\) =640 euros y \(S_{x_B} = 33\) euros.
 
 \[z_B=\frac{672-640}{33}=0.97\]
 
-\chapter{Literature}\label{literature}
+\chapter{Análisis bivariante. Ajuste y regresión
+bidimensional.}\label{analisis-bivariante.-ajuste-y-regresion-bidimensional.}
 
-Here is a review of existing methods. \citep{xie2015}
+\chapter{Objetivos del tema:}\label{objetivos-del-tema}
+
+Cuando analizamos dos variables estadísticas a la vez, hablamos de
+\textbf{estadística descriptiva bivariante}. Si hay más de dos, hablamos
+de \textbf{estadística descriptiva multivariante}. Por ejemplo:
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+X & Y\tabularnewline
+\midrule
+\endhead
+14 & 3\tabularnewline
+12 & 4\tabularnewline
+15 & 1\tabularnewline
+13 & 5\tabularnewline
+16 & 0\tabularnewline
+\bottomrule
+\end{longtable}
+
+Una observación de esta variable bidimensional es \((14,3)\).
+
+Los objetivos que nos planteamos para este capítulo son:
+
+\begin{itemize}
+\item
+  Organizar los datos en tablas de frecuencias, buscando la mejor forma
+  de representarlos gráficamente.
+\item
+  Medir la relación entre dos variables estadísticas cualitativas.
+\item
+  Medir la relación entre dos variables estadísticas cuantitativas.
+\item
+  Realizar predicciones y medir la fiabilidad de dicha predicción.
+\item
+  Entender que \textbf{la correlación no implica causalidad}.
+\end{itemize}
 
 \bibliography{book.bib,packages.bib}
 

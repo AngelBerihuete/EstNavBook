@@ -452,7 +452,7 @@ En general hay atentos a que todos los elementos de un gráfico estén represent
 ![Fuente: Verne (El País)](images/grafico_erroneo4bis.png)
 
 
-Se pueden encontrar todos estos gráficos y su expliacción en el diario [El País](https://verne.elpais.com/verne/2015/01/23/articulo/1422014607_223837.html) así como en  la cuenta de Twitter de Kiko Llaneras [@kikollan](https://twitter.com/kikollan)
+Se pueden encontrar todos estos gráficos y su expliacción en el diario [El País](https://verne.elpais.com/verne/2015/01/23/articulo/1422014607_223837.html) así como en  la cuenta de Twitter de [Kiko Llaneras](https://twitter.com/kikollan)
 
 
 ## Medidas de posición central
@@ -1082,7 +1082,7 @@ Observe que cuando la distribución es simétrica coinciden la media y la median
 
 <img src="01-AnalDatos_files/figure-epub3/unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
 
-En estos casos, la asimetría es, de izquierda a derecha, 0.0260829, 0.8448223, -0.8411634, respectivamente.
+En estos casos, la asimetría es, de izquierda a derecha, -0.0379327, 0.7384921, -0.6654081, respectivamente.
 
 ### Curtosis
 
@@ -1099,7 +1099,18 @@ Para el cálculo de la curtosis utilizaremos $$\gamma_2  =  \frac{\sum_{i=1}^N (
 
 En las distribuciones anteriores, y de izquierda a derecha, las curtosis tienen un valor de 
 
--0.0396889, 261.5213216, -1.2206341, respectivamente.
+-0.0626549, 238.7704519, 0.0243358, respectivamente.
+
+Puede verse una aplicación de cómo el histograma y el diagrama de caja tienen un comportamiento similar ante diferentes formas de la distribución en la siguiente aplicación:
+
+
+```r
+knitr::include_app("https://berihuete.shinyapps.io/Histogram/", 
+  height = "600px")
+```
+
+<iframe src="https://berihuete.shinyapps.io/Histogram/?showcase=0" width="100%" height="600px"></iframe>
+
 
 ## Tipificación
 
