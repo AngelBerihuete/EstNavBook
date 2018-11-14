@@ -1,7 +1,7 @@
 book_filename: "EstNavBook"
 repo: https://github.com/AngelBerihuete/EstNavBook
 output_dir: docs
-new_session: no
+new_session: yes
 language:
   label:
     fig: 'Figura '

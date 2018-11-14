@@ -1,7 +1,7 @@
 --- 
 title: "Estadística descriptiva"
 author: "Ángel Berihuete, Carmen Ramos, Juan Antonio García"
-date: "`r Sys.Date()`"
+date: "2018-11-14"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -20,21 +20,7 @@ El libro ha sido escrito en [R-Markdown](http://rmarkdown.rstudio.com) utilizand
 
 Esta obra está bajo una licencia de [Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional](https://creativecommons.org/licenses/by-sa/4.0/deed.es).
 
-```{r echo=FALSE, fig.align='left'}
-knitr::include_graphics("images/by-sa-88x31.png")
-```
+<img src="images/by-sa-88x31.png" width="88" style="display: block; margin: auto auto auto 0;" />
 
 
-```{r include=FALSE}
-require(e1071)
-require(ggplot2)
-#theme_update(axis.title = element_text(size = 25),axis.text = element_text(size = 25),title = element_text(size = 30))
-require(tidyverse)
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-# funciones auxiliares
-inline <- function(x = "") paste0("`` `r ", x, "` ``")
-inline2 <- function(x = "") paste0("`r ", x, "`")
-```
+

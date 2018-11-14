@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Estadística descriptiva</title>
+  <meta name="description" content="Este libro forma parte de un proyecto de innovación para la creación de material dinámico y colaborativo en las asignaturas de Estadística Descriptiva">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Estadística descriptiva" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Este libro forma parte de un proyecto de innovación para la creación de material dinámico y colaborativo en las asignaturas de Estadística Descriptiva" />
+  <meta name="github-repo" content="AngelBerihuete/EstNavBook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Estadística descriptiva" />
+  
+  <meta name="twitter:description" content="Este libro forma parte de un proyecto de innovación para la creación de material dinámico y colaborativo en las asignaturas de Estadística Descriptiva" />
+  
+
+<meta name="author" content="Ángel Berihuete, Carmen Ramos, Juan Antonio García">
+
+
+<meta name="date" content="2018-11-14">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="literature.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Estadística descriptiva</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prólogo</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción al análisis de datos</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#variables-estadisticas"><i class="fa fa-check"></i><b>1.1</b> Variables estadísticas</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#distribuciones-de-frecuencias"><i class="fa fa-check"></i><b>1.2</b> Distribuciones de frecuencias</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#variables-cuantitativas-discretas"><i class="fa fa-check"></i><b>1.2.1</b> Variables cuantitativas discretas</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#variables-cuantitativas-continuas"><i class="fa fa-check"></i><b>1.2.2</b> Variables cuantitativas continuas</a></li>
+<li class="chapter" data-level="1.2.3" data-path="intro.html"><a href="intro.html#que-numero-de-intervalos-y-que-amplitud-es-la-adecuada"><i class="fa fa-check"></i><b>1.2.3</b> ¿Qué número de intervalos y qué amplitud es la adecuada?</a></li>
+<li class="chapter" data-level="1.2.4" data-path="intro.html"><a href="intro.html#pueden-manipular-nuestra-opinion-con-los-graficos"><i class="fa fa-check"></i><b>1.2.4</b> ¿Pueden manipular nuestra opinión con los gráficos?</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#medidas-de-posicion-central"><i class="fa fa-check"></i><b>1.3</b> Medidas de posición central</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="intro.html"><a href="intro.html#medias"><i class="fa fa-check"></i><b>1.3.1</b> Medias</a></li>
+<li class="chapter" data-level="1.3.2" data-path="intro.html"><a href="intro.html#propiedades-de-la-media"><i class="fa fa-check"></i><b>1.3.2</b> Propiedades de la media</a></li>
+<li class="chapter" data-level="1.3.3" data-path="intro.html"><a href="intro.html#la-mediana"><i class="fa fa-check"></i><b>1.3.3</b> La mediana</a></li>
+<li class="chapter" data-level="1.3.4" data-path="intro.html"><a href="intro.html#la-moda"><i class="fa fa-check"></i><b>1.3.4</b> La moda</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#medidas-de-dispersion"><i class="fa fa-check"></i><b>1.4</b> Medidas de dispersión</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#varianza-y-desviacion-tipica"><i class="fa fa-check"></i><b>1.4.1</b> Varianza y Desviación Típica</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#propiedades-de-la-varianza"><i class="fa fa-check"></i><b>1.4.2</b> Propiedades de la varianza</a></li>
+<li class="chapter" data-level="1.4.3" data-path="intro.html"><a href="intro.html#coeficiente-de-variacion"><i class="fa fa-check"></i><b>1.4.3</b> Coeficiente de Variación</a></li>
+<li class="chapter" data-level="1.4.4" data-path="intro.html"><a href="intro.html#otras-medidas-de-dispersion"><i class="fa fa-check"></i><b>1.4.4</b> Otras medidas de dispersión</a></li>
+<li class="chapter" data-level="1.4.5" data-path="intro.html"><a href="intro.html#desigualdad-de-tchebychev-para-ampliar"><i class="fa fa-check"></i><b>1.4.5</b> Desigualdad de Tchebychev (para ampliar)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#medidas-de-posicion-no-central"><i class="fa fa-check"></i><b>1.5</b> Medidas de posición no central</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#diagrama-de-caja"><i class="fa fa-check"></i><b>1.5.1</b> Diagrama de caja</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#medidas-de-forma"><i class="fa fa-check"></i><b>1.6</b> Medidas de forma</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#asimetria"><i class="fa fa-check"></i><b>1.6.1</b> Asimetría</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#curtosis"><i class="fa fa-check"></i><b>1.6.2</b> Curtosis</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#tipificacion"><i class="fa fa-check"></i><b>1.7</b> Tipificación</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>2</b> Literature</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Estadística descriptiva</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> Introducción al análisis de datos</h1>
+<p>En las siguientes secciones iremos desarrollando los elementos básicos de un análisis exploratorio, calculando medidas que nos ayuden a interpretar de forma adecuada el conjunto de datos analizados. Para ello utilizaremos varios conjuntos de datos que podrán ser descargados del <a href="https://github.com/AngelBerihuete/EstNavBook/tree/master/datasets">repositorio</a> en GitHub.</p>
+<p>Planteamos el siguiente problema sencillo: los precios (en euros) de un conjunto de botellas de vino en cierta sección de un centro comercial son los siguientes</p>
+<p>42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 43 43 43 43 43 43 43 43 43 43 43 43 43 43 43 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 53 53 53 53 53 53 53 53 53 53 62 62 62 62 62 62 62 62 62 63 63 63 63 63</p>
+<p>Podríamos hacernos las siguientes preguntas:</p>
+<ol style="list-style-type: decimal">
+<li><p>¿Cómo preparo los datos para su análisis?</p></li>
+<li><p>¿Qué representación gráfica hago de los datos?</p></li>
+<li><p>¿Puedo elegir uno o varios valores que representen con garantías al conjunto de los datos?</p></li>
+<li><p>¿Cómo puedo sistematizar el análisis de un conjunto de datos?</p></li>
+</ol>
+<p>Un <strong>análisis exploratorio de datos</strong> implica el uso de los elementos numéricos y gráficos que describan lo más exhaustivamente posible un conjunto de datos. Además, deberá poner de manifiesto los aspectos más relevantes de la distribución de los datos: regularidades, datos atípicos, especificidades, relaciones, etc.</p>
+<p>En este capítulo nos marcamos los siguientes objetivos:</p>
+<ul>
+<li><p>Ser capaces de identificar el tipo de variable estadística en estudio.</p></li>
+<li><p>Decidir qué tipo de medidas y gráficos serán los adecuados para resumir los diferentes tipos de variables estadísticas.</p></li>
+<li><p>Entender que <strong>la media no siempre es la adecuada para resumir los datos</strong>.</p></li>
+<li><p>Ser capaces de comparar diferentes medidas entre diferentes conjuntos de datos.</p></li>
+<li><p>Diferenciar entre <strong>análisis exploratorio</strong> de datos e <strong>inferencia estadística</strong>.</p></li>
+</ul>
+<div id="variables-estadisticas" class="section level2">
+<h2><span class="header-section-number">1.1</span> Variables estadísticas</h2>
+<p>Las variables a analizar pueden ser de diferentes tipos:</p>
+<ul>
+<li><p><strong>Cualitativas</strong> o <strong>factores</strong>: son variables no expresables numéricamente.</p></li>
+<li><p><strong>Cuantitativas</strong>: pueden ser expresadas numéricamente. Las variables cuantitativas se subdividen en:</p></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p><strong>Cuantitativas Discretas</strong>, si el conjunto de sus posibles valores tiene cardinal finito o infinito numerable. (Ejemplo: “Número de trabajadores en una bodega”)</p></li>
+<li><p><strong>Cuantitativas Continuas</strong>, si pueden tomar los infinitos valores de un intervalo.</p></li>
+</ol>
+<p>A veces, por cuestiones prácticas, conviene discretizar las variables cuantitativas continuas. Por ejemplo la variable “Antigüedad del vino en una bota, medida en años”.</p>
+</div>
+<div id="distribuciones-de-frecuencias" class="section level2">
+<h2><span class="header-section-number">1.2</span> Distribuciones de frecuencias</h2>
+<p>A partir de un conjunto de datos queremos clasificarlos de modo que la información contenida en ellos quede presentada de forma clara, concisa y ordenada.</p>
+<p>Si representamos por <span class="math inline">\(N\)</span> al número total de datos, entre los que consideraremos que hay <span class="math inline">\(k\)</span> valores distintos <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>,…, <span class="math inline">\(x_k\)</span> (que en el caso de las variables cuantitativas se presentarán ordenados de menor a mayor), se conoce como <strong>frecuencia</strong>:</p>
+<ul>
+<li><p><strong>Absoluta</strong> del valor <span class="math inline">\(x_i\)</span>, al número de veces que se presenta dicho valor en el conjunto de datos. Se representa por <span class="math inline">\(n_i\)</span>.</p></li>
+<li><p><strong>Absoluta acumulada</strong> del valor <span class="math inline">\(x_i\)</span>, al número de datos que hay iguales o inferiores a <span class="math inline">\(x_i\)</span>. Se representa por <span class="math inline">\(N_i\)</span>.</p></li>
+<li><p><strong>Relativa</strong> del valor <span class="math inline">\(x_i\)</span>, al cociente <span class="math inline">\(\dfrac{n_i}{N}\)</span>. Se representa por <span class="math inline">\(f_i\)</span>.</p></li>
+<li><p><strong>Relativa acumulada</strong> del valor <span class="math inline">\(x_i\)</span>, al cociente <span class="math inline">\(\dfrac{N_i}{N}\)</span>. Se representa por <span class="math inline">\(F_i\)</span>.</p></li>
+</ul>
+
+<div class="example">
+<p><span id="exm:fluoruro" class="example"><strong>Ejemplo 1.1  (El problema del fluoruro)  </strong></span></p>
+<p>Para realizar un estudio sobre el contenido en ion fluoruro en vinos embotellados de mayor comercialización en Canarias se procedió al análisis de 79 vinos embotellados de los cuales 50 son de la comunidad de Canarias y 29 de la Península. La siguiente tabla muestra los 10 primeros registros:</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+denominacion
+</th>
+<th style="text-align:left;">
+tipo
+</th>
+<th style="text-align:right;">
+conc_fluor
+</th>
+<th style="text-align:left;">
+procedencia
+</th>
+<th style="text-align:right;">
+precio
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+El Hierro
+</td>
+<td style="text-align:left;">
+Tinto
+</td>
+<td style="text-align:right;">
+0.13
+</td>
+<td style="text-align:left;">
+Canarias
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ycoden Daute Isora
+</td>
+<td style="text-align:left;">
+Tinto
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:left;">
+Canarias
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ycoden Daute Isora
+</td>
+<td style="text-align:left;">
+Tinto
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:left;">
+Canarias
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ycoden Daute Isora
+</td>
+<td style="text-align:left;">
+Tinto
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:left;">
+Canarias
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+La Palma
+</td>
+<td style="text-align:left;">
+Tinto
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:left;">
+Canarias
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lanzarote
+</td>
+<td style="text-align:left;">
+Tinto
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+Canarias
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+</tbody>
+</table>
+<p>La tabla de frecuencias del factor tipo que tiene niveles Tinto, Blanco, Rosado</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ x_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ n_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ N_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ f_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ F_i \]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Blanco
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+0.3418
+</td>
+<td style="text-align:right;">
+0.3418
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rosado
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+0.2278
+</td>
+<td style="text-align:right;">
+0.5696
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tinto
+</td>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+0.4304
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+</tr>
+</tbody>
+</table>
+<p>siendo el gráfico más adecuado para esta variable el <strong>diagrama de sectores</strong> o el <strong>diagrama de barras</strong>.</p>
+<p><img src="01-AnalDatos_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="01-AnalDatos_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="variables-cuantitativas-discretas" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Variables cuantitativas discretas</h3>
+<p>Tabla de frecuencias de la variable precio</p>
+<p>42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 43 43 43 43 43 43 43 43 43 43 43 43 43 43 43 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 53 53 53 53 53 53 53 53 53 53 62 62 62 62 62 62 62 62 62 63 63 63 63 63</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ x_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ n_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ N_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ f_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ F_i \]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+42
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+43
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+0.1899
+</td>
+<td style="text-align:right;">
+0.4430
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+<td style="text-align:right;">
+0.6962
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+53
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+0.1266
+</td>
+<td style="text-align:right;">
+0.8228
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+62
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0.1139
+</td>
+<td style="text-align:right;">
+0.9367
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+63
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+0.0633
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+</tr>
+</tbody>
+</table>
+<p>y el gráfico adecuado para este tipo de variable será el <strong>diagrama de barras</strong>:</p>
+<p><img src="01-AnalDatos_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ x_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ n_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ N_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ f_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ F_i \]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+42
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+43
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+0.1899
+</td>
+<td style="text-align:right;">
+0.4430
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+<td style="text-align:right;">
+0.6962
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+53
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+0.1266
+</td>
+<td style="text-align:right;">
+0.8228
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+62
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0.1139
+</td>
+<td style="text-align:right;">
+0.9367
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+63
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+0.0633
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="variables-cuantitativas-continuas" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Variables cuantitativas continuas</h3>
+<p>La tabla de frecuencias de la variable cuantitativa continua conc_fluor</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ ( l_{i-1}, l_i ] \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[n_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[N_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[f_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[F_i\]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(0,0.2]
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+0.5696
+</td>
+<td style="text-align:right;">
+0.5696
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.2,0.3]
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+67
+</td>
+<td style="text-align:right;">
+0.2785
+</td>
+<td style="text-align:right;">
+0.8481
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.3,0.4]
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0.0886
+</td>
+<td style="text-align:right;">
+0.9367
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.4,0.6]
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+0.0633
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+</tr>
+</tbody>
+</table>
+<p>Obsérvese que hemos agrupado en intervalos los valores</p>
+<p>0.13 0.07 0.10 0.11 0.26 0.12 0.20 0.17 0.08 0.14 0.17 0.13 0.16 0.16 0.15 0.28 0.18 0.20 0.09 0.13 0.13 0.06 0.13 0.22 0.12 0.14 0.12 0.17 0.12 0.50 0.15 0.22 0.13 0.20 0.18 0.13 0.10 0.10 0.18 0.09 0.15 0.15 0.08 0.11 0.16 0.17 0.10 0.09 0.15 0.18 0.25 0.26 0.27 0.28 0.28 0.29 0.27 0.27 0.28 0.44 0.37 0.46 0.24 0.28 0.33 0.37 0.46 0.22 0.28 0.38 0.29 0.27 0.29 0.29 0.36 0.23 0.32 0.36 0.45</p>
+<p>El gráfico adecuado para este tipo de variable es el <strong>histograma</strong>:</p>
+<p><img src="01-AnalDatos_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+</p>
+<p><font color="red">¡Cuidado! Longitud de intervalos distinta.</font> Tendremos que utilizar la <strong>densidad</strong> <span class="math inline">\((h_i)\)</span> para representar el histograma. Ahora la tabla de frecuencias de la variable cuantitativa continua conc_fluor</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ ( l_{i-1}, l_i  ] \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[n_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[N_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[f_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[F_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[h_i\]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(0,0.2]
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+0.5696
+</td>
+<td style="text-align:right;">
+0.5696
+</td>
+<td style="text-align:right;">
+2.8481
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.2,0.3]
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+67
+</td>
+<td style="text-align:right;">
+0.2785
+</td>
+<td style="text-align:right;">
+0.8481
+</td>
+<td style="text-align:right;">
+2.7848
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.3,0.4]
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0.0886
+</td>
+<td style="text-align:right;">
+0.9367
+</td>
+<td style="text-align:right;">
+0.8861
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.4,0.6]
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+0.0633
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+<td style="text-align:right;">
+0.3165
+</td>
+</tr>
+</tbody>
+</table>
+<p>Siendo <span class="math inline">\(h_i = \frac{f_i}{a_i}\)</span></p>
+<p><img src="01-AnalDatos_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="que-numero-de-intervalos-y-que-amplitud-es-la-adecuada" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> ¿Qué número de intervalos y qué amplitud es la adecuada?</h3>
+<p>No hay una fórmula con la que obtener un valor óptimo del número de intervalos y su amplitud. Existen muchas dependiendo de las hipótesis que hagamos en nuestro problema. Algunas de las más utilizadas si tenemos <span class="math inline">\(N\)</span> observaciones:</p>
+<ul>
+<li><span class="math inline">\(k = \sqrt{N}\)</span> lo usa de forma predefinida el programa Excel.</li>
+<li><span class="math inline">\(k = \lceil \log_2 N \rceil +1\)</span> lo usa de forma predefinida el programa R. Da resultados pobres si <span class="math inline">\(n&lt;30\)</span> (Nota: <span class="math inline">\(\lceil 2.4 \rceil = 3\)</span>).</li>
+</ul>
+<p>Una vez tenemos el número de intervalos, basta calcular su amplitud mediante</p>
+<p><span class="math display">\[ a = \frac{\max{x} - \min{x}}{k} \]</span></p>
+</div>
+<div id="pueden-manipular-nuestra-opinion-con-los-graficos" class="section level3">
+<h3><span class="header-section-number">1.2.4</span> ¿Pueden manipular nuestra opinión con los gráficos?</h3>
+<p>En general hay atentos a que todos los elementos de un gráfico estén representados adecuadamente. Algunos ejemplos de gráficos erróneos en los médios de comunicación podrían ser los siguientes:</p>
+<ol style="list-style-type: decimal">
+<li>Los ejes no tiene la escala adecuada o están cortados</li>
+</ol>
+<div class="figure">
+<img src="images/grafico_erroneo1.jpg" alt="Fuente: Verne (El País)" />
+<p class="caption">Fuente: Verne (El País)</p>
+</div>
+<div class="figure">
+<img src="images/grafico_erroneo2.jpg" alt="Fuente: Verne (El País)" />
+<p class="caption">Fuente: Verne (El País)</p>
+</div>
+<div class="figure">
+<img src="images/grafico_erroneo3.jpg" alt="Fuente: Verne (El País)" />
+<p class="caption">Fuente: Verne (El País)</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>No se mantiene la escala en todo el gráfico</li>
+</ol>
+<div class="figure">
+<img src="images/grafico_erroneo4.png" alt="Fuente: Verne (El País)" />
+<p class="caption">Fuente: Verne (El País)</p>
+</div>
+<div class="figure">
+<img src="images/grafico_erroneo4bis.png" alt="Fuente: Verne (El País)" />
+<p class="caption">Fuente: Verne (El País)</p>
+</div>
+<p>Se pueden encontrar todos estos gráficos y su expliacción en el diario <a href="https://verne.elpais.com/verne/2015/01/23/articulo/1422014607_223837.html">El País</a> así como en la cuenta de Twitter de Kiko Llaneras <span class="citation">(<span class="citeproc-not-found" data-reference-id="kikollan"><strong>???</strong></span>)</span>(<a href="https://twitter.com/kikollan" class="uri">https://twitter.com/kikollan</a>)</p>
+</div>
+</div>
+<div id="medidas-de-posicion-central" class="section level2">
+<h2><span class="header-section-number">1.3</span> Medidas de posición central</h2>
+<div id="medias" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Medias</h3>
+<ul>
+<li>Una <strong>media</strong> es una medida de representación central que necesariamente debe cumplir tres requisitos:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Para su obtención deben utilizarse todas las observaciones.</li>
+<li>Debe ser un valor comprendido entre el menor y el mayor de los valores de la distribución.</li>
+<li>Debe venir expresada en la misma unidad que los datos.</li>
+</ol>
+<p>La media aritmética se calcula mediante la fórmula</p>
+<p><span class="math display">\[\overline{x}  =  \frac{\displaystyle\sum_{i=1}^N x_i}{N} = \frac{\displaystyle\sum_{i=1}^r x_i n_i}{N}  =   \sum_{i=1}^r x_i f_i\]</span></p>
+<p>Por ejemplo, la media aritmética de la variable cuantitativa discreta</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ x_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ n_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ N_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ f_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ F_i \]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+42
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+43
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+0.1899
+</td>
+<td style="text-align:right;">
+0.4430
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+<td style="text-align:right;">
+0.6962
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+53
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+0.1266
+</td>
+<td style="text-align:right;">
+0.8228
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+62
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0.1139
+</td>
+<td style="text-align:right;">
+0.9367
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+63
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+0.0633
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[\bar{x} = \frac{\displaystyle\sum_{i=1}^r x_i n_i}{N} = \frac{42\cdot 20 + 43 \cdot 15 + \cdots + 63 \cdot 5}{20+15\cdots+5} = \frac{3928}{79}=49.7215\]</span></p>
+<p>En el caso de <strong>variables continuas</strong> agrupadas en intervalos tendremos que obtener primero la <strong>marca de clase</strong></p>
+<p><span class="math display">\[x_i = \frac{l_{-1}+l_i}{2}\]</span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ ( l_{i-1}, l_i  ] \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[n_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[N_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[f_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[F_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[h_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ x_i \]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(0,0.2]
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+0.5696
+</td>
+<td style="text-align:right;">
+0.5696
+</td>
+<td style="text-align:right;">
+2.8481
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.2,0.3]
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+67
+</td>
+<td style="text-align:right;">
+0.2785
+</td>
+<td style="text-align:right;">
+0.8481
+</td>
+<td style="text-align:right;">
+2.7848
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.3,0.4]
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0.0886
+</td>
+<td style="text-align:right;">
+0.9367
+</td>
+<td style="text-align:right;">
+0.8861
+</td>
+<td style="text-align:right;">
+0.35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.4,0.6]
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+0.0633
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+<td style="text-align:right;">
+0.3165
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[\bar{x}=\frac{ 0.1 \cdot 45 + 0.25 \cdot 22 + \cdots + 0.5 \cdot 5}{45+22\cdots+5} = \frac{14.95}{79}=0.1892\]</span></p>
+<p>Otras medias que suelen utilizarse son:</p>
+<ul>
+<li><p><strong>media geométrica</strong>: <span class="math display">\[\bar{x}_g  =  \sqrt[N]{x_1^{n_1} x_2^{n_2} \ldots x_r^{n_k}}\]</span></p></li>
+<li><p><strong>media armónica</strong>: <span class="math display">\[\bar{x}_a  = \frac{N}{\displaystyle\sum_{i=1}^k\frac{n_i}{x_i}}\]</span></p></li>
+<li><p><strong>media ponderada</strong>: Se asigna a cada valor <span class="math inline">\(x_i\)</span> un peso <span class="math inline">\(w_i\)</span> que depende de la importancia relativa de cada uno de estos valores bajo algún criterio:</p>
+<p><span class="math display">\[\bar{x}_p = \frac{\sum_{i=1}^r n_iw_ix_i}{\sum_{i=1}^r n_iw_i}\]</span></p></li>
+</ul>
+</div>
+<div id="propiedades-de-la-media" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Propiedades de la media</h3>
+<ol style="list-style-type: decimal">
+<li><p>Se cumple que <span class="math inline">\(\sum_{i=1}^r (x_i - \bar{x})n_i = 0\)</span></p></li>
+<li><p>Dada una transformación lineal <span class="math inline">\(Y = aX + b\)</span>, se cumple que <span class="math inline">\(\bar{y} = a \bar{x} + b\)</span>.</p></li>
+</ol>
+<p>Por ejemplo, si sabemos que la media de temperaturas en grados Celsius de cierta región es <span class="math inline">\(\bar{x} = 15^{\circ} \mbox{C}\)</span>, ¿qué media en grados Farenheit tendrá dicha región?</p>
+<p><span class="math display">\[\bar{y} = 1.8 \cdot 15 + 32 = 59^{\circ} \mbox{F},\]</span> porque el paso de una temperatura a otra se hace mediante la transformación <span class="math inline">\(Y=1.8 X + 32\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>La media es el valor <span class="math inline">\(\phi\)</span> que hace mínima la expresión: <span class="math display">\[\sum_{i=1}^r (x_i - \phi)^2 n_i\]</span></li>
+</ol>
+</div>
+<div id="la-mediana" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> La mediana</h3>
+<p>La <strong>mediana</strong>, <span class="math inline">\(M_e\)</span>, es un valor que, <strong>una vez ordenados los datos</strong>, deja la mitad de las observaciones a la izquierda de él y la otra mitad a la derecha.</p>
+<p>El cálculo de la mediana en el caso de las <strong>variables discretas</strong> se realiza:</p>
+<ol style="list-style-type: decimal">
+<li>Si <span class="math inline">\(N\)</span> es impar, entonces <span class="math display">\[M_e = x_{({\frac{n+1}{2}})}\]</span></li>
+<li>Si <span class="math inline">\(N\)</span> es par, entonces <span class="math display">\[M_e = \frac{x_{({\frac{n}{2}})}+x_{({\frac{n}{2}+1})}}{2}\]</span></li>
+</ol>
+<p>Por ejemplo, en la siguiente tabla de frecuencias</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ x_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ n_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ N_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ f_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ F_i \]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+42
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+43
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+0.1899
+</td>
+<td style="text-align:right;">
+0.4430
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+0.2532
+</td>
+<td style="text-align:right;">
+0.6962
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+53
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+0.1266
+</td>
+<td style="text-align:right;">
+0.8228
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+62
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0.1139
+</td>
+<td style="text-align:right;">
+0.9367
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+63
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+0.0633
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+</tr>
+</tbody>
+</table>
+<p>como <span class="math inline">\(N\)</span> es impar, entonces la mediana es el valor que ocupa la posición</p>
+<p><span class="math display">\[\frac{79+1}{2} = \frac{80}{2} = 40\]</span></p>
+<p>Mirando en la tabla <span class="math inline">\(M_e = 52\)</span></p>
+<p>Sin embargo, en la siguiente tabla</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ x_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ n_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ N_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ f_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ F_i \]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+42
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.2564
+</td>
+<td style="text-align:right;">
+0.2564
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+43
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+0.1923
+</td>
+<td style="text-align:right;">
+0.4487
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+0.2564
+</td>
+<td style="text-align:right;">
+0.7051
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+53
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+0.1282
+</td>
+<td style="text-align:right;">
+0.8333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+62
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0.1154
+</td>
+<td style="text-align:right;">
+0.9487
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+63
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+78
+</td>
+<td style="text-align:right;">
+0.0513
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+</tr>
+</tbody>
+</table>
+<p>como <span class="math inline">\(N\)</span> es par, entonces la mediana es la media de los valores que ocupan la posión <span class="math inline">\(\frac{78}{2} = 39\)</span> y <span class="math inline">\(\frac{78}{2}+1 = 40\)</span>. Mirando en la tabla</p>
+<p><span class="math display">\[M_e = \frac{52+52}{2} = 52\]</span></p>
+<p>La mediana en variables continuas agrupadas en intervalos necesita de una fórmula. Por ejemplo, en el caso de la tabla de frecuencias:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ ( l_{i-1}, l_i  ] \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[n_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[N_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[f_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[F_i\]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(0,0.2]
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+0.5696
+</td>
+<td style="text-align:right;">
+0.5696
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.2,0.3]
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+67
+</td>
+<td style="text-align:right;">
+0.2785
+</td>
+<td style="text-align:right;">
+0.8481
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.3,0.4]
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0.0886
+</td>
+<td style="text-align:right;">
+0.9367
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.4,0.6]
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+0.0633
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+</tr>
+</tbody>
+</table>
+<p>El primer <span class="math inline">\(N_i\)</span> que es mayor o igual a <span class="math inline">\(\frac{50 \cdot 79}{100} = 39.5\)</span> es <span class="math inline">\(N_1 = 45\)</span>, entonces <span class="math inline">\(M_e\)</span> está dentro del intervalo <span class="math inline">\((0, 0.2]\)</span>, por tanto</p>
+<p><span class="math display">\[M_e = l_{i-1} + \frac{\frac{50 \cdot N}{100} - N_{i-1}}{N_i - N_{i-1}} \cdot a_i\]</span> <span class="math display">\[M_e = 0 + \frac{\frac{50 \cdot 79}{100} - 0}{45 - 0} \cdot 0.2 = 0.1755\]</span></p>
+</div>
+<div id="la-moda" class="section level3">
+<h3><span class="header-section-number">1.3.4</span> La moda</h3>
+<ul>
+<li><p>La moda absoluta de una distribución es el valor que más veces se repite.</p></li>
+<li><p>Además de la moda absoluta, aquellos valores que tengan frecuencia mayor a la de los valores adyacentes serán relativas.</p></li>
+</ul>
+<p>En la distribución 2, 3, 3, 4, 6, 7, 7, 7, 10</p>
+<ul>
+<li><p><span class="math inline">\(M_o= 7\)</span> es la moda</p></li>
+<li><p><span class="math inline">\(M_{o_r}=3\)</span> es una moda relativa</p></li>
+</ul>
+<p>La moda para variables discretas es sencillo. Miramos la frecuencia absoluta:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ x_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ n_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ N_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ f_i \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ F_i \]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+42
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.2564
+</td>
+<td style="text-align:right;">
+0.2564
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+43
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+0.1923
+</td>
+<td style="text-align:right;">
+0.4487
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+0.2564
+</td>
+<td style="text-align:right;">
+0.7051
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+53
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+0.1282
+</td>
+<td style="text-align:right;">
+0.8333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+62
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0.1154
+</td>
+<td style="text-align:right;">
+0.9487
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+63
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+78
+</td>
+<td style="text-align:right;">
+0.0513
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+</tr>
+</tbody>
+</table>
+<p>En este caso, el valor que más se repite es <span class="math inline">\(M_o = 42\)</span></p>
+<p>En el caso de variables continuas tendremos que utilizar una fórmula:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ ( l_{i-1}, l_i  ] \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[n_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[N_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[f_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[F_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[h_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[ x_i \]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(0,0.2]
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+0.5696
+</td>
+<td style="text-align:right;">
+0.5696
+</td>
+<td style="text-align:right;">
+2.8481
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.2,0.3]
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+67
+</td>
+<td style="text-align:right;">
+0.2785
+</td>
+<td style="text-align:right;">
+0.8481
+</td>
+<td style="text-align:right;">
+2.7848
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.3,0.4]
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0.0886
+</td>
+<td style="text-align:right;">
+0.9367
+</td>
+<td style="text-align:right;">
+0.8861
+</td>
+<td style="text-align:right;">
+0.35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.4,0.6]
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+0.0633
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+<td style="text-align:right;">
+0.3165
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+</tr>
+</tbody>
+</table>
+<p>En lugar de fijarnos en <span class="math inline">\(n_i\)</span> nos fijamos en <span class="math inline">\(h_i\)</span>. Como el mayor <span class="math inline">\(h_i\)</span> es 2.8481 la moda es</p>
+<p><span class="math display">\[M_o = l_{i-1} + \frac{ h_{i+1} }{ h_{i-1}+h_{i+1} } \cdot a_i\]</span></p>
+<p><span class="math display">\[M_o = 0 + \frac{2.7848}{0+2.7848} \cdot 0.2 = 0.2\]</span></p>
+</div>
+</div>
+<div id="medidas-de-dispersion" class="section level2">
+<h2><span class="header-section-number">1.4</span> Medidas de dispersión</h2>
+<div id="varianza-y-desviacion-tipica" class="section level3">
+<h3><span class="header-section-number">1.4.1</span> Varianza y Desviación Típica</h3>
+<ul>
+<li>La <strong>varianza</strong>, <span class="math inline">\(S^2\)</span>, y su raíz cuadrada positiva, la <strong>desviación típica</strong>, <span class="math inline">\(S\)</span>, son las medidas de dispersión más importantes.</li>
+</ul>
+<p><span class="math inline">\(S^2 = \frac{\sum_{i=1}^r ( x_i - \bar{x})^2 n_i}{N} = \frac{\sum_{i=1}^r x_i^2 n_i}{N} - \bar{x}^2 \qquad S=+\sqrt{S^2}\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>La desviación típica viene dada en las mismas unidades que la variable estadística.</p></li>
+<li><p>Tanto <span class="math inline">\(S\)</span> como <span class="math inline">\(S^2\)</span> son siempre no negativas y valen cero sólo en el caso de que todos los valores coincidan con la media.</p></li>
+<li><p>Los valores atípicos influyen en las dos debido al cálculo de la media.</p></li>
+</ol>
+</div>
+<div id="propiedades-de-la-varianza" class="section level3">
+<h3><span class="header-section-number">1.4.2</span> Propiedades de la varianza</h3>
+<ul>
+<li>Si <span class="math inline">\(Y=aX + b\)</span> entonces se verifica <span class="math inline">\(S_Y^2 = a^2 S_X^2\)</span>. Por ejemplo</li>
+</ul>
+<p>Dada <span class="math inline">\(X\)</span> con <span class="math inline">\(\bar{x}=12\)</span> y <span class="math inline">\(S_X=9\)</span>, entonces para <span class="math inline">\(Y=3X-4\)</span>:</p>
+<p><span class="math display">\[\bar{y}=3\bar{x}-4=3\cdot 12-4=32\]</span> <span class="math display">\[S_Y=\sqrt{a ^2}\cdot S_X=\sqrt{9}\cdot 9=27\]</span></p>
+</div>
+<div id="coeficiente-de-variacion" class="section level3">
+<h3><span class="header-section-number">1.4.3</span> Coeficiente de Variación</h3>
+<p><span class="math display">\[C_v = \frac{S}{\mid \bar{x}\mid}\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Permite comparar la dispersión de varias distribuciones.</p></li>
+<li><p>Da información sobre la representatividad de la media. De forma orientativa, si el coeficiente de variación es menor o igual a 0.5 diremos que la media es representativa.</p></li>
+</ol>
+</div>
+<div id="otras-medidas-de-dispersion" class="section level3">
+<h3><span class="header-section-number">1.4.4</span> Otras medidas de dispersión</h3>
+<ul>
+<li><p>El <strong>rango</strong> es la diferencia entre el mayor y el menor de los valores de la variable.</p></li>
+<li><p>La <strong>desviación media</strong> <span class="math display">\[D_m = \frac{\sum_{i=1}^r |  x_i - \bar{x} | n_i}{n}\]</span></p></li>
+</ul>
+</div>
+<div id="desigualdad-de-tchebychev-para-ampliar" class="section level3">
+<h3><span class="header-section-number">1.4.5</span> Desigualdad de Tchebychev (para ampliar)</h3>
+<p>La desigualdad de Tchebychev proporciona una cota inferior para el porcentaje de observaciones en un determinado intervalo con centro la media de la distribución:</p>
+<p>Dada una distribución con <span class="math inline">\(\bar{x}=25\)</span>, y <span class="math inline">\(S=4\)</span>, <span class="math inline">\([\bar{x}-3S,\bar{x}+3S]=[13,37]\)</span> garantiza la presencia en su interior de, al menos, el <span class="math inline">\(88.88\%\)</span> de la distribución.</p>
+</div>
+</div>
+<div id="medidas-de-posicion-no-central" class="section level2">
+<h2><span class="header-section-number">1.5</span> Medidas de posición no central</h2>
+<p>Se llaman medidas de posición o de orden <span class="math inline">\(k\)</span> a aquellas que dividen a la distribución en <span class="math inline">\(k\)</span> partes, de tal forma que en cada una de esas partes haya el mismo número de elementos. Las más importantes son:</p>
+<ul>
+<li><p>Los <strong>cuartiles</strong>, <span class="math inline">\(Q_i, i=1,2,3\)</span> que dividen a la distribución en cuatro partes iguales.</p></li>
+<li><p>Los <strong>deciles</strong> , <span class="math inline">\(D_i, i=1,2, \ldots, 9\)</span> que dividen a la distribución en diez partes iguales.</p></li>
+<li><p>Los <strong>percentiles</strong>, <span class="math inline">\(P_i, i=1,2, \ldots, 99\)</span> que dividen a la distribución en cien partes iguales.</p></li>
+</ul>
+<p>El cálculo de los percentiles será suficiente para calcular tanto los deciles como los cuartiles. En el caso de variables discretas:</p>
+<ul>
+<li>Si el <span class="math inline">\(k\%\)</span> de <span class="math inline">\(N\)</span>, donde <span class="math inline">\(N\)</span> es el número de datos, es un número entero, <span class="math inline">\(r\)</span>, entonces</li>
+</ul>
+<p><span class="math display">\[P_k = \cfrac{x_r+x_{r+1}}{2}\]</span></p>
+<ul>
+<li>Si el <span class="math inline">\(k\%\)</span> de <span class="math inline">\(N\)</span> no es un número entero, lo redondeamos al siguiente, <span class="math inline">\(r\)</span>, u entonces</li>
+</ul>
+<p><span class="math display">\[P_k = x_r\]</span></p>
+<p>Para el caso de datos agrupados en intervalos utilizaremos la fórmula:</p>
+<p><span class="math display">\[P_k = l_{i-1} + \cfrac{\cfrac{k \cdot N}{100} - N_{i-1}}{N_i -N_{i-1}} \cdot a_i\]</span> donde <span class="math inline">\(N_i\)</span> es la primera frecuencia absoluta acumulada que cumple <span class="math inline">\(N_i \geq \cfrac{k \cdot N}{100}\)</span></p>
+<div id="diagrama-de-caja" class="section level3">
+<h3><span class="header-section-number">1.5.1</span> Diagrama de caja</h3>
+<p>Es una representación gráfica de los cuartiles:</p>
+<ul>
+<li><p>La caja representa el 50% central de la distribución, la línea situada en el interior de la caja es la mediana (algunos programas estadísticos representan también un símbolo que se corresponde con la media).</p></li>
+<li><p>La longitud de la caja es el <strong>rango intercuartílico</strong> <span class="math inline">\(R_I = Q_3 - Q_1\)</span></p></li>
+<li><p>Los extremos inferiores y superiores de los segmentos encierran los valores “normales”.</p></li>
+<li><p>Los candidatos a valores anómalos se etiquetan como <strong>atípicos</strong> y se encuentran fuera del intervalo <span class="math inline">\((Q_1 - 1.5 \cdot R_I,Q_3 + 1.5 \cdot R_I)\)</span>:</p></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math display">\[ ( l_{i-1}, l_i  ] \]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[n_i\]</span>
+</th>
+<th style="text-align:right;">
+<span class="math display">\[N_i\]</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(0,0.2]
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.2,0.3]
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.3,0.4]
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+74
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+(0.4,0.6]
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+79
+</td>
+</tr>
+</tbody>
+</table>
+<p>Los percentiles 25, 50 y 75 de la concentración de fluoruro son 0.13, 0.18, 0.28 respectivamente. Además <span class="math inline">\(1.5 \cdot R_I\)</span> es 0.225</p>
+<p><img src="01-AnalDatos_files/figure-html/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="medidas-de-forma" class="section level2">
+<h2><span class="header-section-number">1.6</span> Medidas de forma</h2>
+<div id="asimetria" class="section level3">
+<h3><span class="header-section-number">1.6.1</span> Asimetría</h3>
+<ul>
+<li>El <strong>coeficiente de simetría</strong> viene dado por: <span class="math display">\[\gamma_1 = \frac{\sum_{i=1}^N (x_i - \bar{x})^3}{N \cdot S^3}\]</span></li>
+</ul>
+<p>Observe que cuando la distribución es simétrica coinciden la media y la mediana. Si la distribución tiene además forma de campana, la media y la mediana se aproximan a la moda.</p>
+<p><img src="01-AnalDatos_files/figure-html/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>En estos casos, la asimetría es, de izquierda a derecha, -0.1294876, 0.5579809, -0.7194838, respectivamente.</p>
+</div>
+<div id="curtosis" class="section level3">
+<h3><span class="header-section-number">1.6.2</span> Curtosis</h3>
+<p>Para el cálculo de la curtosis utilizaremos <span class="math display">\[\gamma_2  =  \frac{\sum_{i=1}^N (x_i - \bar{x})^4}{N \cdot S^4}-3\]</span></p>
+<ul>
+<li><p><span class="math inline">\(\gamma_2= 0\)</span>, distribución <strong>mesocúrtica</strong></p></li>
+<li><p><span class="math inline">\(\gamma_2&lt; 0\)</span>, distribución <strong>platicúrtica</strong></p></li>
+<li><p><span class="math inline">\(\gamma_2&gt; 0\)</span>, distribución <strong>leptocúrtica</strong></p></li>
+</ul>
+<p><img src="01-AnalDatos_files/figure-html/unnamed-chunk-23-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>En las distribuciones anteriores, y de izquierda a derecha, las curtosis tienen un valor de</p>
+<p>-0.1646015, 942.7308049, -1.190785, respectivamente.</p>
+</div>
+</div>
+<div id="tipificacion" class="section level2">
+<h2><span class="header-section-number">1.7</span> Tipificación</h2>
+<p>A veces la distribución presenta muchas irregularidades, como asimetrías acentuadas, valores extremos, etc. En estos casos es recomendable efectuar una transformación que la haga más regular. Un caso particular de transformación es la <strong>tipificación</strong>.</p>
+<p>Dada <span class="math inline">\(X\)</span> con media <span class="math inline">\(\bar{x}\)</span> y desviación típica <span class="math inline">\(S\)</span></p>
+<p><span class="math display">\[Z  =  \frac{X  -  \bar{x}}{S}\]</span></p>
+<p>A <span class="math inline">\(Z\)</span> se le llama variable o y tiene media 0 y desviación típica 1.</p>
+<p>La tipificación tiene la propiedad de hacer comparables individuos que pertenezcan a distintas distribuciones, aún en el caso de que éstas vinieran expresadas en diferentes unidades.</p>
+<p>Dos trabajadores del mismo sector ganan 620 y 672 euros, respectivamente. El primero pertenece a la empresa A, cuya retribución media y desviación típica vienen dados por: <span class="math inline">\(\bar{x}_A= 580\)</span> euros y <span class="math inline">\(S_{x_A} = 25\)</span> euros, mientras que para la empresa del segundo trabajador se tiene: <span class="math inline">\(\bar{x}_B\)</span> =640 euros y <span class="math inline">\(S_{x_B} = 33\)</span> euros.</p>
+<p>¿cuál de los dos ocupa mejor posición relativa dentro de su empresa? <span class="math display">\[z_A=\frac{620-580}{25}=1.6\]</span></p>
+<p><span class="math display">\[z_B=\frac{672-640}{33}=0.97\]</span></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="literature.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/AngelBerihuete/EstNavBook/edit/master/01-AnalDatos.Rmd",
+"text": "Edit"
+},
+"download": ["EstNavBook.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

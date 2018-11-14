@@ -1,14 +1,14 @@
-# Introducción {#intro}
+# Introducción al análisis de datos  {#intro}
 
-En las siguientes secciones iremos desarrollando los elementos básicos de un análisis exploratorio, calculando medidas que nos ayuden a interpretar de forma adecuada el conjunto de datos analizados. Para ello utilizaremos varios conjuntos de datos que podrán ser descargados de 
+En las siguientes secciones iremos desarrollando los elementos básicos de un análisis exploratorio, calculando medidas que nos ayuden a interpretar de forma adecuada el conjunto de datos analizados. Para ello utilizaremos varios conjuntos de datos que podrán ser descargados del [repositorio](https://github.com/AngelBerihuete/EstNavBook/tree/master/datasets) en GitHub.
 
-## Problema
-
-- Los precios (en euros) de un conjunto de botellas de vino en cierta sección de un centro comercial son:
+Planteamos el siguiente problema sencillo: los precios (en euros) de un conjunto de botellas de vino en cierta sección de un centro comercial son los siguientes
 
 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 43 43 43 43 43 43 43 43 43
 43 43 43 43 43 43 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 53 53 53
 53 53 53 53 53 53 53 62 62 62 62 62 62 62 62 62 63 63 63 63 63
+
+Podríamos hacernos las siguientes preguntas:
 
 1.  ¿Cómo preparo los datos para su análisis?
 
@@ -20,11 +20,9 @@ En las siguientes secciones iremos desarrollando los elementos básicos de un an
 
 
 
-- Un **análisis exploratorio de datos** implica el uso de los elementos numéricos y gráficos que describan lo más exhaustivamente posible un conjunto de datos.
+Un **análisis exploratorio de datos** implica el uso de los elementos numéricos y gráficos que describan lo más exhaustivamente posible un conjunto de datos. Además, deberá poner de manifiesto los aspectos más relevantes de la distribución de los datos: regularidades, datos atípicos, especificidades, relaciones, etc.
 
-- Un **análisis exploratorio de datos** deberá poner de manifiesto los aspectos más relevantes de la distribución de los datos: regularidades, datos atípicos, especificidades, relaciones, etc.
-
-## Objetivos del capítulo
+En este capítulo nos marcamos los siguientes objetivos:
 
 - Ser capaces de identificar el tipo de variable estadística en estudio.
 
@@ -68,10 +66,8 @@ Si representamos por $N$ al número total de datos, entre los que consideraremos
 - **Relativa acumulada** del valor $x_i$, al cociente $\dfrac{N_i}{N}$. Se representa por
 $F_i$.
 
+```{example, label="fluoruro", name="El problema del fluoruro"}
 
-## Distribución de frecuencias
-
-### Problema del fluoruro
 
 Para realizar un estudio sobre el contenido en ion fluoruro en vinos embotellados de  mayor comercialización en Canarias se procedió al análisis de 79 vinos embotellados de los cuales 50 son de la comunidad de Canarias y 29 de la Península. La siguiente tabla muestra los 10 primeros registros:
 
@@ -84,14 +80,13 @@ precios_base <- rep(c(42, 43, 52, 53, 62, 63), c(20, 15, 20, 10, 9, 5))
 fluoruro$precio <- precios_base
 ```
 
+
 ```{r, echo=FALSE}
 knitr::kable(head(fluoruro), format = 'html')
 ```
 
 
-### Variables cualitativas
-
-Tabla de frecuencias del factor `r colnames(fluoruro)[2]` que tiene niveles `r unique(fluoruro$tipo)`
+La tabla de frecuencias del factor `r colnames(fluoruro)[2]` que tiene niveles `r unique(fluoruro$tipo)`
 
 ```{r, echo=FALSE}
 tab_Tipo <- as.data.frame(table(fluoruro$tipo))
@@ -103,19 +98,7 @@ colnames(tab_Tipo) <- c("\\[ x_i \\]", "\\[ n_i \\]", "\\[ N_i \\]", " \\[ f_i \
 knitr::kable(tab_Tipo, format = 'html', escape = FALSE, digits = 4, padding = 2)
 ```
 
-
-Tabla de frecuencias del factor `r colnames(fluoruro)[2]` que tiene niveles `r unique(fluoruro$tipo)`
-
-```{r, echo=FALSE}
-tab_Tipo <- as.data.frame(table(fluoruro$tipo))
-tab_Tipo$CumFreq <- cumsum(tab_Tipo$Freq)
-tab_Tipo$relFreq <- tab_Tipo$Freq/sum(tab_Tipo$Freq)
-tab_Tipo$CumrelFreq <- cumsum(tab_Tipo$Freq/sum(tab_Tipo$Freq))
-colnames(tab_Tipo) <- c("\\[ x_i \\]", "\\[ n_i \\]", "\\[ N_i \\]", " \\[ f_i \\] ", " \\[ F_i \\]")
-
-knitr::kable(tab_Tipo, format = 'html', escape = FALSE, digits = 4, padding = 2)
-```
-
+siendo el gráfico más adecuado para esta variable el **diagrama de sectores** o el **diagrama de barras**.
 
 ```{r, echo=FALSE, fig.align='center'}
 library(ggplot2)
@@ -147,12 +130,6 @@ ggplot(data,aes(x="", fill = Tipo)) +
 ```
 
 
-Tabla de frecuencias del factor `r colnames(fluoruro)[2]` que tiene niveles `r unique(fluoruro$tipo)`
-
-```{r, echo=FALSE}
-knitr::kable(tab_Tipo, format = 'html', escape = FALSE, digits = 4, padding = 2)
-```
-
 ```{r, echo=FALSE, fig.align='center'}
 ggplot(data, aes(Tipo)) + geom_bar() + scale_y_continuous("Número de botellas") + labs(title="Diagrama de barras")
 ```
@@ -175,7 +152,7 @@ colnames(tab_precios) <- c("\\[ x_i \\]", "\\[ n_i \\]", "\\[ N_i \\]", " \\[ f_
 knitr::kable(tab_precios, format = 'html', escape = FALSE, digits = 4, padding = 2)
 ```
 
-Tabla de frecuencias de la variable `r colnames(fluoruro)[5]`
+y el gráfico adecuado para este tipo de variable será el **diagrama de barras**:
 
 
 ```{r, echo=FALSE, fig.align='center'}
@@ -193,18 +170,19 @@ knitr::kable(tab_precios, format = 'html', escape = FALSE, digits = 4, padding =
 
 ### Variables cuantitativas continuas
 
-Tabla de frecuencias de la variable cuantitativa continua `r colnames(fluoruro)[3]`
+La tabla de frecuencias de la variable cuantitativa continua `r colnames(fluoruro)[3]`
 
 ```{r, echo=FALSE}
 tab_concen <- as.data.frame(table(cut(fluoruro$conc_fluor, breaks = c(0,0.20, 0.30, 0.40, 0.60))))
 tab_concen$CumFreq <- cumsum(tab_concen$Freq)
 tab_concen$relFreq <- tab_concen$Freq/sum(tab_concen$Freq)
 tab_concen$CumrelFreq <- cumsum(tab_concen$Freq/sum(tab_concen$Freq))
-tab_concen$Var1 <- stringr::str_replace_all(tab_concen$Var1, "]", "&#93;")
-colnames(tab_concen) <- c("\\[x_i\\]", "\\[n_i\\]", "\\[N_i\\]", "\\[f_i\\]", "\\[F_i\\]")
+colnames(tab_concen) <- c("\\[ ( l_{i-1}, l_i ] \\]", "\\[n_i\\]", "\\[N_i\\]", "\\[f_i\\]", "\\[F_i\\]")
 knitr::kable(tab_concen, format = 'html', escape = FALSE, digits = 4, padding = 2)
 ```
 
+
+Obsérvese que hemos agrupado en intervalos los valores 
 
 0.13 0.07 0.10 0.11 0.26 0.12 0.20 0.17 0.08 0.14 0.17 0.13 0.16 0.16 0.15 0.28 0.18
 0.20 0.09 0.13 0.13 0.06 0.13 0.22 0.12 0.14 0.12 0.17 0.12 0.50 0.15 0.22 0.13 0.20
@@ -212,17 +190,8 @@ knitr::kable(tab_concen, format = 'html', escape = FALSE, digits = 4, padding = 
 0.26 0.27 0.28 0.28 0.29 0.27 0.27 0.28 0.44 0.37 0.46 0.24 0.28 0.33 0.37 0.46 0.22
 0.28 0.38 0.29 0.27 0.29 0.29 0.36 0.23 0.32 0.36 0.45
 
-Tabla de frecuencias de la variable cuantitativa continua `r colnames(fluoruro)[3]`
 
-```{r, echo=FALSE}
-tab_concen <- as.data.frame(table(cut(fluoruro$conc_fluor, breaks = c(0,0.20, 0.30, 0.40, 0.60))))
-tab_concen$CumFreq <- cumsum(tab_concen$Freq)
-tab_concen$relFreq <- tab_concen$Freq/sum(tab_concen$Freq)
-tab_concen$CumrelFreq <- cumsum(tab_concen$Freq/sum(tab_concen$Freq))
-tab_concen$Var1 <- stringr::str_replace_all(tab_concen$Var1, "]", "&#93;")
-colnames(tab_concen) <- c("\\[ &#40; l_{i-1}, l_i  &#93; \\]", "\\[n_i\\]", "\\[N_i\\]", "\\[f_i\\]", "\\[F_i\\]")
-knitr::kable(tab_concen, format = 'html', escape = FALSE, digits = 4, padding = 2)
-```
+El gráfico adecuado para este tipo de variable es el **histograma**:
 
 ```{r, echo=FALSE, fig.align='center'}
 ggplot(fluoruro, aes(conc_fluor)) +
@@ -233,9 +202,7 @@ ggplot(fluoruro, aes(conc_fluor)) +
 <p>
 
 </p>
-<font color="red">¡Cuidado! Longitud de intervalos distinta.</font>
-
-Tabla de frecuencias de la variable cuantitativa continua `r colnames(fluoruro)[3]`
+<font color="red">¡Cuidado! Longitud de intervalos distinta.</font> Tendremos que utilizar la **densidad** $(h_i)$ para representar el histograma. Ahora la tabla de frecuencias de la variable cuantitativa continua `r colnames(fluoruro)[3]`
 
 ```{r, echo=FALSE}
 breaks = c(0,0.20, 0.30, 0.40, 0.60)
@@ -245,7 +212,7 @@ tab_concen$relFreq <- tab_concen$Freq/sum(tab_concen$Freq)
 tab_concen$CumrelFreq <- cumsum(tab_concen$Freq/sum(tab_concen$Freq))
 tab_concen$hi <- tab_concen$relFreq/(breaks[2:5]-breaks[1:4])
 tab_concen$Var1 <- stringr::str_replace_all(tab_concen$Var1, "]", "&#93;")
-colnames(tab_concen) <- c("\\[ &#40; l_{i-1}, l_i  &#93; \\]", "\\[n_i\\]", "\\[N_i\\]", " \\[f_i\\] ", " \\[F_i\\]", "\\[h_i\\]")
+colnames(tab_concen) <- c("\\[ ( l_{i-1}, l_i  ] \\]", "\\[n_i\\]", "\\[N_i\\]", " \\[f_i\\] ", " \\[F_i\\]", "\\[h_i\\]")
 knitr::kable(tab_concen, format = 'html', escape = FALSE, digits = 4, padding = 2)
 ```
 
@@ -271,49 +238,47 @@ Una vez tenemos el número de intervalos, basta calcular su amplitud mediante
 $$ a = \frac{\max{x} - \min{x}}{k} $$
 
 
-# ¿Pueden manipular nuestra opinión con los gráficos?
+### ¿Pueden manipular nuestra opinión con los gráficos?
+
+En general hay atentos a que todos los elementos de un gráfico estén representados adecuadamente. Algunos ejemplos de gráficos erróneos en los médios de comunicación podrían ser los siguientes: 
 
 1. Los ejes no tiene la escala adecuada o están cortados
 
 
-![Fuente: Verne (El País)](grafico_erroneo1.jpg)
+![Fuente: Verne (El País)](images/grafico_erroneo1.jpg)
 
 
-![Fuente: Verne (El País)](grafico_erroneo2.jpg)
+![Fuente: Verne (El País)](images/grafico_erroneo2.jpg)
 
 
-![Fuente: Verne (El País)](grafico_erroneo3.jpg)
+![Fuente: Verne (El País)](images/grafico_erroneo3.jpg)
 
 2. No se mantiene la escala en todo el gráfico
 
-![Fuente: Verne (El País)](grafico_erroneo4.png)
+![Fuente: Verne (El País)](images/grafico_erroneo4.png)
 
-![Fuente: Verne (El País)](grafico_erroneo4bis.png)
-
-
-Pueden encontrar toda esta información sobre la manipulación de gráficos en
-
-- https://verne.elpais.com/verne/2015/01/23/articulo/1422014607_223837.html
-
-y en la cuenta de Twitter de Kiko Llaneras @kikollan
+![Fuente: Verne (El País)](images/grafico_erroneo4bis.png)
 
 
-# Medidas de posición central
+Se pueden encontrar todos estos gráficos y su expliacción en el diario [El País](https://verne.elpais.com/verne/2015/01/23/articulo/1422014607_223837.html) así como en  la cuenta de Twitter de Kiko Llaneras [@kikollan](https://twitter.com/kikollan)
 
-## Medias
 
--   Una **media** es una medida de representación central que necesariamente debe cumplir tres requisitos:
+## Medidas de posición central
+
+### Medias
+
+- Una **media** es una medida de representación central que necesariamente debe cumplir tres requisitos:
 
   1.  Para su obtención deben utilizarse todas las observaciones.
   2.  Debe ser un valor comprendido entre el menor y el mayor de los
         valores de la distribución.
   3.  Debe venir expresada en la misma unidad que los datos.
 
-### La media aritmética
+La media aritmética se calcula mediante la fórmula
 
 $$\overline{x}  =  \frac{\displaystyle\sum_{i=1}^N x_i}{N} = \frac{\displaystyle\sum_{i=1}^r x_i n_i}{N}  =   \sum_{i=1}^r x_i f_i$$
 
-### La media aritmética de variable cuantitativa discreta
+ Por ejemplo, la media aritmética de la variable cuantitativa discreta
 
 ```{r, echo=FALSE}
 knitr::kable(tab_precios, format = 'html', escape = FALSE, digits = 4, padding = 2)
@@ -323,11 +288,9 @@ knitr::kable(tab_precios, format = 'html', escape = FALSE, digits = 4, padding =
 $$\bar{x} = \frac{\displaystyle\sum_{i=1}^r x_i n_i}{N} = \frac{42\cdot 20 + 43 \cdot 15 + \cdots + 63 \cdot 5}{20+15\cdots+5} = \frac{3928}{79}=49.7215$$
 
 
-### La media aritmética en variables continuas agrupadas en intervalos
+En el caso de  **variables continuas** agrupadas en intervalos tendremos que obtener  primero la **marca de clase**
 
-Para **variables continuas** agrupadas en intervalos tendremos que obtener la **marca de clase**
-
-$$x_i = \frac{l_{-1}-l_i}{2}$$
+$$x_i = \frac{l_{-1}+l_i}{2}$$
 
 
 ```{r, echo=FALSE}
@@ -340,7 +303,7 @@ knitr::kable(tab_concen, format = 'html', escape = FALSE, digits = 4, padding = 
 $$\bar{x}=\frac{ 0.1 \cdot 45 + 0.25 \cdot 22 + \cdots + 0.5 \cdot 5}{45+22\cdots+5} = \frac{14.95}{79}=0.1892$$
 
 
-### Otras medias (ampliación)
+Otras medias que suelen utilizarse son:
 
 -   **media geométrica**: $$\bar{x}_g  =  \sqrt[N]{x_1^{n_1} x_2^{n_2} \ldots x_r^{n_k}}$$
 
@@ -351,13 +314,13 @@ $$\bar{x}=\frac{ 0.1 \cdot 45 + 0.25 \cdot 22 + \cdots + 0.5 \cdot 5}{45+22\cdot
     $$\bar{x}_p = \frac{\sum_{i=1}^r n_iw_ix_i}{\sum_{i=1}^r n_iw_i}$$
 
 
-## Propiedades de la media
+### Propiedades de la media
 
 1. Se cumple que $\sum_{i=1}^r (x_i  -  \bar{x})n_i =  0$
 
 2. Dada una transformación lineal $Y  =  aX +  b$, se cumple que $\bar{y}  =  a \bar{x}  + b$.
 
-Por ejemplo, si sabemos que la media de temperaturas en grados Celsius de cierta región es $\bar{x} = 15^{\circ} \mbox{C}$, ¿qué media en grados Farenheit tendrá dicha región? 
+Por ejemplo, si sabemos que la media de temperaturas en grados Celsius de cierta región es $\bar{x} = 15^{\circ} \mbox{C}$, ¿qué media en grados Farenheit tendrá dicha región?
 
 $$\bar{y} = 1.8 \cdot 15 + 32 = 59^{\circ} \mbox{F},$$
 porque el paso de una temperatura a otra se hace mediante la transformación $Y=1.8 X + 32$
@@ -366,27 +329,29 @@ porque el paso de una temperatura a otra se hace mediante la transformación $Y=
     $$\sum_{i=1}^r (x_i - \phi)^2 n_i$$
 
 
-## La mediana
+### La mediana
 
 La **mediana**, $M_e$, es un valor que, **una vez ordenados los datos**, deja la mitad de las observaciones a la izquierda de él y la otra mitad a la derecha.
 
-### Cálculo de la Mediana en **variables discretas**
+El cálculo de la mediana en el caso de las **variables discretas** se realiza:
 
 1. Si $N$ es impar, entonces $$M_e = x_{({\frac{n+1}{2}})}$$
 2. Si $N$ es par, entonces $$M_e = \frac{x_{({\frac{n}{2}})}+x_{({\frac{n}{2}+1})}}{2}$$
 
 
-
-### La mediana en variables discretas
+Por ejemplo, en la siguiente tabla de frecuencias
 
 ```{r, echo=FALSE}
 knitr::kable(tab_precios, format = 'html', escape = FALSE, digits = 4, padding = 2)
 ```
 
-Si $N$ es impar, entonces la mediana es el valor que ocupa la posición
+como $N$ es impar, entonces la mediana es el valor que ocupa la posición
 
 $$\frac{79+1}{2} = \frac{80}{2} = 40$$
+
 Mirando en la tabla $M_e = 52$
+
+Sin embargo, en la siguiente tabla
 
 ```{r, echo=FALSE}
 fluoruro <- fluoruro[1:78,]
@@ -398,29 +363,25 @@ colnames(tab_precios) <- c("\\[ x_i \\]", "\\[ n_i \\]", "\\[ N_i \\]", " \\[ f_
 knitr::kable(tab_precios, format = 'html', escape = FALSE, digits = 4, padding = 2)
 ```
 
-Si $N$ es par, entonces la mediana es la media de los valores que ocupan la posión $\frac{78}{2} = 39$ y $\frac{78}{2}+1 = 40$. Mirando en la tabla
+como $N$ es par, entonces la mediana es la media de los valores que ocupan la posión $\frac{78}{2} = 39$ y $\frac{78}{2}+1 = 40$. Mirando en la tabla
 
 $$M_e = \frac{52+52}{2} = 52$$
 
-### La mediana en variables continuas
+La mediana en variables continuas agrupadas en intervalos necesita de una fórmula. Por ejemplo, en el caso de la tabla de frecuencias:
 
 ```{r, echo=FALSE}
 knitr::kable(tab_concen[,1:5], format = 'html', escape = FALSE, digits = 4, padding = 2)
 ```
 
-El primer $N_i$ que es mayor o igual a $\frac{50 \cdot 79}{100} = 39.5$  es $N_1 = 45$, entonces $M_e$ está dentro del intervalo 
-
-&#40; 0, 0.2 &#93;
-
-Por tanto
+El primer $N_i$ que es mayor o igual a $\frac{50 \cdot 79}{100} = 39.5$  es $N_1 = 45$, entonces $M_e$ está dentro del intervalo $(0, 0.2]$, por tanto
 
 $$M_e = l_{i-1} + \frac{\frac{50 \cdot N}{100} - N_{i-1}}{N_i - N_{i-1}} \cdot a_i$$
 $$M_e = 0 + \frac{\frac{50 \cdot 79}{100} - 0}{45 - 0} \cdot 0.2 = 0.1755$$
 
 
-## La moda
+### La moda
 
--   La absoluta de una distribución es el valor que más veces se repite.
+-   La moda absoluta de una distribución es el valor que más veces se repite.
 
 -   Además de la moda absoluta, aquellos valores que tengan frecuencia
     mayor a la de los valores adyacentes serán relativas.
@@ -432,37 +393,30 @@ En la distribución 2, 3, 3, 4, 6, 7, 7, 7, 10
 -   $M_{o_r}=3$ es una moda relativa
 
 
-### La moda para variables discretas
+La moda para variables discretas es sencillo. Miramos la frecuencia absoluta:
 
 ```{r, echo=FALSE}
 knitr::kable(tab_precios, format = 'html', escape = FALSE, digits = 4, padding = 2)
 ```
 
-El valor que más se repite es $M_o = 42$
+En este caso, el valor que más se repite es $M_o = 42$
 
-### La moda para variables continuas
+En el caso de variables continuas tendremos que utilizar una fórmula:
 
 ```{r, echo=FALSE}
 knitr::kable(tab_concen, format = 'html', escape = FALSE, digits = 4, padding = 2)
 ```
 
-En lugar de fijarnos en $n_i$ nos fijamos en $h_i$. Como el mayor $h_i$ es `r round(max(tab_concen[,6]),4)` la moda es 
+En lugar de fijarnos en $n_i$ nos fijamos en $h_i$. Como el mayor $h_i$ es `r round(max(tab_concen[,6]),4)` la moda es
 
 $$M_o = l_{i-1} + \frac{ h_{i+1} }{ h_{i-1}+h_{i+1} } \cdot a_i$$
 
 $$M_o = 0 + \frac{2.7848}{0+2.7848} \cdot 0.2 = 0.2$$
 
 
-## Comparación entre media, moda y mediana
+## Medidas de dispersión
 
--   La media es la mejor de las medidas de representación, pues la moda es bastante inestable y un pequeño cambio en las observaciones puede afectarle mucho, mientras que la mediana es insensible al tamaño de los datos.
-
--   La media es sensible a las alteraciones de los datos, al tamaño de éstos y si se conocen las medias de dos conjuntos de datos, basta con saber los tamaños de ambos grupos para calcular la media global.
-
-
-# Medidas de dispersión
-
-## Varianza y Desviación Típica
+### Varianza y Desviación Típica
 
 - La **varianza**, $S^2$, y su raíz cuadrada positiva, la **desviación típica**, $S$, son las medidas de dispersión más importantes.
 
@@ -476,7 +430,7 @@ $$M_o = 0 + \frac{2.7848}{0+2.7848} \cdot 0.2 = 0.2$$
 3. Los valores atípicos influyen en las dos debido al cálculo de la media.
 
 
-## Propiedades de la varianza
+### Propiedades de la varianza
 
 - Si $Y=aX  + b$ entonces se verifica $S_Y^2  =  a^2 S_X^2$. Por ejemplo
 
@@ -486,7 +440,7 @@ $$\bar{y}=3\bar{x}-4=3\cdot 12-4=32$$
 $$S_Y=\sqrt{a ^2}\cdot S_X=\sqrt{9}\cdot 9=27$$
 
 
-## Coeficiente de Variación
+### Coeficiente de Variación
 
 $$C_v = \frac{S}{\mid \bar{x}\mid}$$
 
@@ -495,26 +449,25 @@ $$C_v = \frac{S}{\mid \bar{x}\mid}$$
 2.  Da información sobre la representatividad de la media. De forma orientativa, si el coeficiente de variación es menor o igual a 0.5 diremos que la media es representativa.
 
 
-## Otras medidas de dispersión
+### Otras medidas de dispersión
 
--   El **rango** es la diferencia entre el mayor y el menor de los valores de la
+-  El **rango** es la diferencia entre el mayor y el menor de los valores de la
     variable.
 
--   La **desviación media** $$D_m = \frac{\sum_{i=1}^r |  x_i - \bar{x} | n_i}{n}$$
+-  La **desviación media** $$D_m = \frac{\sum_{i=1}^r |  x_i - \bar{x} | n_i}{n}$$
 
 
-## Desigualdad de Tchebychev  (para ampliar)
+### Desigualdad de Tchebychev  (para ampliar)
 
 La desigualdad de Tchebychev proporciona una cota inferior para el porcentaje de observaciones en un determinado intervalo con centro la media de la distribución:
 
 Dada una distribución con $\bar{x}=25$, y $S=4$, $[\bar{x}-3S,\bar{x}+3S]=[13,37]$ garantiza la presencia en su interior de, al menos, el $88.88\%$ de la distribución.
 
 
-# Medidas de posición no central
+## Medidas de posición no central
 
--   Se llaman medidas de posición o de orden $k$ a aquellas que dividen a la distribución en $k$ partes, de tal forma que en cada una de esas partes haya el mismo número de elementos.
+Se llaman medidas de posición o de orden $k$ a aquellas que dividen a la distribución en $k$ partes, de tal forma que en cada una de esas partes haya el mismo número de elementos. Las más importantes son:
 
--   Las más importantes son:
   -   Los **cuartiles**, $Q_i, i=1,2,3$ que dividen a la distribución en cuatro partes iguales.
 
   -   Los **deciles** , $D_i, i=1,2, \ldots, 9$ que dividen a la distribución en diez partes iguales.
@@ -522,11 +475,7 @@ Dada una distribución con $\bar{x}=25$, y $S=4$, $[\bar{x}-3S,\bar{x}+3S]=[13,3
   -   Los **percentiles**, $P_i, i=1,2, \ldots, 99$ que dividen a la distribución en cien partes iguales.
 
 
-# Medidas de posición no central
-
-El cálculo de los percentiles será suficiente para calcular tanto los deciles como los cuartiles. 
-
-### Para variables discretas:
+El cálculo de los percentiles será suficiente para calcular tanto los deciles como los cuartiles. En el caso de variables discretas:
 
 - Si el $k\%$ de $N$, donde $N$ es el número de datos, es un número entero, $r$, entonces
 
@@ -537,35 +486,31 @@ $$P_k = \cfrac{x_r+x_{r+1}}{2}$$
 $$P_k = x_r$$
 
 
-El cálculo de los percentiles será suficiente para calcular tanto los deciles como los cuartiles. 
-
-### Para datos agrupados en intervalos utilizaremos la fórmula:
+Para el caso de datos agrupados en intervalos utilizaremos la fórmula:
 
 $$P_k = l_{i-1} + \cfrac{\cfrac{k \cdot N}{100} - N_{i-1}}{N_i -N_{i-1}} \cdot a_i$$
 donde $N_i$ es la primera frecuencia absoluta acumulada que cumple $N_i \geq \cfrac{k \cdot N}{100}$
 
 
-## Diagrama de caja
+### Diagrama de caja
 
--   La caja representa el 50% central de la distribución, la línea
-    situada en el interior de la caja es la mediana, mientras que la
-    cruz se corresponde con la media.
+Es una representación gráfica de los cuartiles:
 
--   La longitud de la caja es el **rango intercuartílico** $R_I =  Q_3  -  Q_1$
+- La caja representa el 50% central de la distribución, la línea situada en el interior de la caja es la mediana (algunos programas estadísticos representan también un símbolo que se corresponde con la media).
 
--   Los extremos inferiores y superiores de los segmentos encierran los
-    valores "normales".
+- La longitud de la caja es el **rango intercuartílico** $R_I =  Q_3  -  Q_1$
 
--   Los candidatos a valores anómalos se etiquetan como **atípicos** y se
-    encuentran fuera del intervalo $(Q_1 - 1.5 \cdot R_I,Q_3 + 1.5 \cdot R_I)$:
+- Los extremos inferiores y superiores de los segmentos encierran los valores "normales".
+
+- Los candidatos a valores anómalos se etiquetan como **atípicos** y se encuentran fuera del intervalo $(Q_1 - 1.5 \cdot R_I,Q_3 + 1.5 \cdot R_I)$:
 
 
 ```{r, echo=FALSE}
 knitr::kable(tab_concen[,1:3], format = 'html', escape = FALSE, digits = 4, padding = 2)
 ```
 
-Los percentiles 25, 50 y 75 de la concentración de fluoruro son 
-`r quantile(fluoruro$conc_fluor, 0.25)`, `r quantile(fluoruro$conc_fluor, 0.5)`, 
+Los percentiles 25, 50 y 75 de la concentración de fluoruro son
+`r quantile(fluoruro$conc_fluor, 0.25)`, `r quantile(fluoruro$conc_fluor, 0.5)`,
 `r quantile(fluoruro$conc_fluor, 0.75)` respectivamente. Además $1.5 \cdot R_I$ es `r 1.5 * (quantile(fluoruro$conc_fluor, 0.75) - quantile(fluoruro$conc_fluor, 0.25))`
 
 
@@ -574,15 +519,13 @@ ggplot(data = fluoruro, aes(x = "", y = conc_fluor)) + geom_boxplot() + coord_fl
 ```
 
 
-# Medidas de forma
+## Medidas de forma
 
-## Asimetría
+### Asimetría
 
--   El **coeficiente de simetría** viene dado por: $$\gamma_1 = \frac{\sum_{i=1}^N (x_i - \bar{x})^3}{N \cdot S^3}$$
+- El **coeficiente de simetría** viene dado por: $$\gamma_1 = \frac{\sum_{i=1}^N (x_i - \bar{x})^3}{N \cdot S^3}$$
 
--   Observe que cuando la distribución es simétrica coinciden la media y la mediana.
-
--   Si la distribución tiene además forma de campana, la media y la mediana se aproximan a la moda.
+Observe que cuando la distribución es simétrica coinciden la media y la mediana. Si la distribución tiene además forma de campana, la media y la mediana se aproximan a la moda.
 
 
 ```{r, echo=FALSE, fig.align='center', fig.height=5}
@@ -592,7 +535,7 @@ x3 <- x[which(x<3.5)]
 
 data_skewness <- data.frame(valor = c(x1,x2,x3), dist = as.factor(rep(c(1,2,3), c(length(x1), length(x2), length(x3)))))
 
-ggplot(data = data_skewness, aes(valor, ..density..)) + 
+ggplot(data = data_skewness, aes(valor, ..density..)) +
   geom_histogram(colour = "black", fill="lightgray", bins = 10) +
   scale_x_continuous("") +
   scale_y_continuous("Densidad") +
@@ -601,15 +544,9 @@ ggplot(data = data_skewness, aes(valor, ..density..)) +
   theme_bw()
 ```
 
-```{r, echo=FALSE}
-skew_tipo <- skewness_tipo <- data_skewness %>% 
-  group_by(dist) %>%
-  summarise(skewness(valor, type = 3))
-```
+En estos casos, la asimetría es, de izquierda a derecha, `r e1071::skewness(x1, type = 3)`, `r e1071::skewness(x2, type = 3)`, `r e1071::skewness(x3, type = 3)`, respectivamente.
 
-La asimetría de las anteriores distribuciones son `r skewness_tipo[[2]][1]`, `r skewness_tipo[[2]][2]` y `r skewness_tipo[[2]][3]`, respectivamente.
-
-## Curtosis
+### Curtosis
 
 Para el cálculo de la curtosis utilizaremos $$\gamma_2  =  \frac{\sum_{i=1}^N (x_i - \bar{x})^4}{N \cdot S^4}-3$$
 
@@ -627,7 +564,7 @@ x3 <- runif(1000, 0, 1)
 
 data_kurt <- data.frame(valor = c(x1,x2,x3), dist = as.factor(rep(c(1,2,3), c(length(x1), length(x2), length(x3)))))
 
-ggplot(data = data_kurt, aes(valor, ..density..)) + 
+ggplot(data = data_kurt, aes(valor, ..density..)) +
   geom_histogram(colour = "black", fill="lightgray", bins = 10) +
   scale_x_continuous("") +
   scale_y_continuous("Densidad") +
@@ -636,22 +573,15 @@ ggplot(data = data_kurt, aes(valor, ..density..)) +
   theme_bw()
 ```
 
-```{r, echo=FALSE}
-kurt_dist <- data_kurt %>% 
-  group_by(dist) %>%
-  summarise(kurtosis(valor, type = 3))
-```
+En las distribuciones anteriores, y de izquierda a derecha, las curtosis tienen un valor de 
 
-La asimetría de las anteriores distribuciones son `r kurt_dist[[2]][1]`, `r kurt_dist[[2]][2]` y `r kurt_dist[[2]][3]`, respectivamente.
+`r e1071::kurtosis(x1, type = 3)`, `r e1071::kurtosis(x2, type = 3)`, `r e1071::kurtosis(x3, type = 3)`, respectivamente.
 
+## Tipificación
 
-# Tipificación
+A veces la distribución presenta muchas irregularidades, como asimetrías acentuadas, valores extremos, etc. En estos casos es recomendable efectuar una transformación que la haga más regular. Un caso particular de transformación es la **tipificación**.
 
-- A veces la distribución presenta muchas irregularidades, como asimetrías acentuadas, valores extremos, etc. En estos casos es recomendable efectuar una transformación que la haga más regular
-
-- Un caso particular de transformación es la **tipificación**.
-
-- Dada $X$ con media $\bar{x}$ y desviación típica $S$
+Dada $X$ con media $\bar{x}$ y desviación típica $S$
 
 $$Z  =  \frac{X  -  \bar{x}}{S}$$
 
