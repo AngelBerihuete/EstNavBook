@@ -1,0 +1,22 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">Estadística descriptiva</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con bookdown</a></li>
+    edit: https://github.com/AngelBerihuete/EstNavBook/edit/master/%s
+    sharing:
+      github: yes
+      facebook: no
+      twitter: no
+    download: "pdf"
+#    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+#bookdown::epub_book: default
