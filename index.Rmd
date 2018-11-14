@@ -14,8 +14,15 @@ description: "Este libro forma parte de un proyecto de innovación para la creac
 
 # Prólogo {-}
 
-Este libro es una recopilación de apuntes y presentaciones en las clases de estadística descriptiva. No es un libro completo. Al contrario, se está insertando y actualizando material de manera continua. ¡Cualquier sugerencia a través de GitHub será bienvenida!
+Este libro es una recopilación de apuntes y presentaciones impartidos en las clases de Estadística descriptiva. No es un libro completo. Al contrario, se está insertando y actualizando material de manera continua. ¡Cualquier sugerencia a través del repo en GitHub será bienvenida!
 
 El libro ha sido escrito en [R-Markdown](http://rmarkdown.rstudio.com) utilizando el paquete [`bookdown`](https://bookdown.org/yihui/bookdown/) y está disponible en el repositorio Github: [AngelBerihuete/EstNavBook](https://github.com/AngelBerihuete/EstNavBook).
 
 Esta obra está bajo una licencia de [Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional](https://creativecommons.org/licenses/by-sa/4.0/deed.es).
+
+```{r setup, include=FALSE}
+require(e1071)
+require(ggplot2)
+#theme_update(axis.title = element_text(size = 25),axis.text = element_text(size = 25),title = element_text(size = 30))
+require(tidyverse)
+```
