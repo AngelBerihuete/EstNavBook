@@ -580,7 +580,8 @@ En las distribuciones anteriores, y de izquierda a derecha, las curtosis tienen 
 Puede verse una aplicación de cómo el histograma y el diagrama de caja tienen un comportamiento similar ante diferentes formas de la distribución en la siguiente aplicación:
 
 ```{r, echo=FALSE}
-knitr::include_app("https://berihuete.shinyapps.io/Histogram/")
+knitr::include_app("https://berihuete.shinyapps.io/Histogram/", 
+  height = "800px")
 ```
 
 
